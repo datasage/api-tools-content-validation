@@ -12,6 +12,9 @@ use PHPUnit\Framework\TestCase;
 
 class InputFilterPluginTest extends TestCase
 {
+    protected MvcEvent $event;
+    protected InputFilterPlugin $plugin;
+
     protected function setUp(): void
     {
         parent::setUp();
