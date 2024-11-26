@@ -98,62 +98,6 @@
       <code><![CDATA[include __DIR__ . '/../config/module.config.php']]></code>
     </MixedReturnStatement>
   </file>
-  <file src="src/Validator/Db/NoRecordExistsFactory.php">
-    <DeprecatedClass>
-      <code><![CDATA[NoRecordExists]]></code>
-      <code><![CDATA[NoRecordExists]]></code>
-      <code><![CDATA[NoRecordExists::class]]></code>
-      <code><![CDATA[new NoRecordExists($options)]]></code>
-      <code><![CDATA[new NoRecordExists(ArrayUtils::merge(
-                $options,
-                ['adapter' => $container->get($options['adapter'])]
-            ))]]></code>
-    </DeprecatedClass>
-    <DeprecatedInterface>
-      <code><![CDATA[NoRecordExistsFactory]]></code>
-    </DeprecatedInterface>
-    <MixedArgument>
-      <code><![CDATA[$container]]></code>
-      <code><![CDATA[$options['adapter']]]></code>
-    </MixedArgument>
-    <MixedAssignment>
-      <code><![CDATA[$container]]></code>
-    </MixedAssignment>
-    <ParamNameMismatch>
-      <code><![CDATA[$validators]]></code>
-    </ParamNameMismatch>
-    <UndefinedInterfaceMethod>
-      <code><![CDATA[getServiceLocator]]></code>
-    </UndefinedInterfaceMethod>
-  </file>
-  <file src="src/Validator/Db/RecordExistsFactory.php">
-    <DeprecatedClass>
-      <code><![CDATA[RecordExists]]></code>
-      <code><![CDATA[RecordExists]]></code>
-      <code><![CDATA[RecordExists::class]]></code>
-      <code><![CDATA[new RecordExists($options)]]></code>
-      <code><![CDATA[new RecordExists(ArrayUtils::merge(
-                $options,
-                ['adapter' => $container->get($options['adapter'])]
-            ))]]></code>
-    </DeprecatedClass>
-    <DeprecatedInterface>
-      <code><![CDATA[RecordExistsFactory]]></code>
-    </DeprecatedInterface>
-    <MixedArgument>
-      <code><![CDATA[$container]]></code>
-      <code><![CDATA[$options['adapter']]]></code>
-    </MixedArgument>
-    <MixedAssignment>
-      <code><![CDATA[$container]]></code>
-    </MixedAssignment>
-    <ParamNameMismatch>
-      <code><![CDATA[$validators]]></code>
-    </ParamNameMismatch>
-    <UndefinedInterfaceMethod>
-      <code><![CDATA[getServiceLocator]]></code>
-    </UndefinedInterfaceMethod>
-  </file>
   <file src="test/ContentValidationListenerTest.php">
     <DeprecatedMethod>
       <code><![CDATA[returnValue]]></code>
@@ -293,24 +237,6 @@
     <DeprecatedMethod>
       <code><![CDATA[returnValue]]></code>
     </DeprecatedMethod>
-    <MixedMethodCall>
-      <code><![CDATA[__invoke]]></code>
-      <code><![CDATA[__invoke]]></code>
-      <code><![CDATA[__invoke]]></code>
-      <code><![CDATA[setParam]]></code>
-      <code><![CDATA[setParam]]></code>
-    </MixedMethodCall>
-    <UndefinedThisPropertyAssignment>
-      <code><![CDATA[$this->event]]></code>
-      <code><![CDATA[$this->plugin]]></code>
-    </UndefinedThisPropertyAssignment>
-    <UndefinedThisPropertyFetch>
-      <code><![CDATA[$this->event]]></code>
-      <code><![CDATA[$this->event]]></code>
-      <code><![CDATA[$this->plugin]]></code>
-      <code><![CDATA[$this->plugin]]></code>
-      <code><![CDATA[$this->plugin]]></code>
-    </UndefinedThisPropertyFetch>
   </file>
   <file src="test/TestAsset/CustomCollectionInputFilter.php">
     <MissingTemplateParam>
@@ -321,48 +247,5 @@
     <MissingTemplateParam>
       <code><![CDATA[CustomValidationInputFilter]]></code>
     </MissingTemplateParam>
-  </file>
-  <file src="test/Validator/Db/NoRecordExistsFactoryTest.php">
-    <DeprecatedClass>
-      <code><![CDATA[$validator]]></code>
-      <code><![CDATA[$validator]]></code>
-      <code><![CDATA[NoRecordExists::class]]></code>
-      <code><![CDATA[NoRecordExists::class]]></code>
-    </DeprecatedClass>
-    <InvalidPropertyAssignmentValue>
-      <code><![CDATA[$this->prophesize(Adapter::class)->reveal()]]></code>
-    </InvalidPropertyAssignmentValue>
-    <MixedArgument>
-      <code><![CDATA[$config['validators']]]></code>
-    </MixedArgument>
-    <MixedArrayAccess>
-      <code><![CDATA[$config['validators']]]></code>
-    </MixedArrayAccess>
-    <MixedAssignment>
-      <code><![CDATA[$config]]></code>
-    </MixedAssignment>
-    <UndefinedDocblockClass>
-      <code><![CDATA[Adapter&ObjectProphecy]]></code>
-    </UndefinedDocblockClass>
-  </file>
-  <file src="test/Validator/Db/RecordExistsFactoryTest.php">
-    <DeprecatedClass>
-      <code><![CDATA[$validator]]></code>
-      <code><![CDATA[$validator]]></code>
-      <code><![CDATA[RecordExists::class]]></code>
-      <code><![CDATA[RecordExists::class]]></code>
-    </DeprecatedClass>
-    <InvalidPropertyAssignmentValue>
-      <code><![CDATA[$this->prophesize(Adapter::class)->reveal()]]></code>
-    </InvalidPropertyAssignmentValue>
-    <MixedArgument>
-      <code><![CDATA[$config['validators']]]></code>
-    </MixedArgument>
-    <MixedArrayAccess>
-      <code><![CDATA[$config['validators']]]></code>
-    </MixedArrayAccess>
-    <MixedAssignment>
-      <code><![CDATA[$config]]></code>
-    </MixedAssignment>
   </file>
 </files>
