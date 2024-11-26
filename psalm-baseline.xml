@@ -1,319 +1,368 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<files psalm-version="4.30.0@d0bc6e25d89f649e4f36a534f330f8bb4643dd69">
-  <file src="src/ContentValidationListener.php">
-    <ImplementedReturnTypeMismatch occurrences="1">
-      <code>ContentValidationListener</code>
-    </ImplementedReturnTypeMismatch>
-    <InvalidNullableReturnType occurrences="1">
-      <code>EventManagerInterface</code>
-    </InvalidNullableReturnType>
-    <MissingClosureParamType occurrences="2">
-      <code>$key</code>
-      <code>$value</code>
-    </MissingClosureParamType>
-    <MixedArgument occurrences="3">
-      <code>$key</code>
-      <code>$method</code>
-      <code>$subData</code>
-    </MixedArgument>
-    <MixedArgumentTypeCoercion occurrences="1">
-      <code>$validationGroup</code>
-    </MixedArgumentTypeCoercion>
-    <MixedArrayAccess occurrences="2">
-      <code>$this-&gt;config[$controllerService][$method . '_COLLECTION']</code>
-      <code>$this-&gt;config[$controllerService]['input_filter']</code>
-    </MixedArrayAccess>
-    <MixedAssignment occurrences="2">
-      <code>$method</code>
-      <code>$subData</code>
-    </MixedAssignment>
-    <MixedInferredReturnType occurrences="4">
-      <code>InputFilterInterface</code>
-      <code>bool</code>
-      <code>null|ApiProblemResponse</code>
-      <code>string|false</code>
-    </MixedInferredReturnType>
-    <MixedReturnStatement occurrences="4">
-      <code>$this-&gt;config[$controllerService][$method . '_COLLECTION']</code>
-      <code>$this-&gt;config[$controllerService][$method]</code>
-      <code>$this-&gt;config[$controllerService]['input_filter']</code>
-      <code>$this-&gt;inputFilters[$inputFilterService]</code>
-    </MixedReturnStatement>
-    <NullableReturnStatement occurrences="1">
-      <code>$this-&gt;events</code>
-    </NullableReturnStatement>
-    <ParamNameMismatch occurrences="1">
-      <code>$events</code>
-    </ParamNameMismatch>
-    <PossiblyInvalidArgument occurrences="1">
-      <code>$data</code>
-    </PossiblyInvalidArgument>
-    <UndefinedClass occurrences="1">
-      <code>V2RouteMatch</code>
+<files psalm-version="5.26.1@d747f6500b38ac4f7dfc5edbcae6e4b637d7add0">
+  <file src="config/module.config.php">
+    <UndefinedClass>
+      <code><![CDATA[InputFilterPlugin]]></code>
     </UndefinedClass>
-    <UndefinedDocblockClass occurrences="1">
-      <code>RouteMatch|V2RouteMatch</code>
+  </file>
+  <file src="src/ContentValidationListener.php">
+    <ArgumentTypeCoercion>
+      <code><![CDATA[$validationGroup]]></code>
+    </ArgumentTypeCoercion>
+    <ImplementedReturnTypeMismatch>
+      <code><![CDATA[ContentValidationListener]]></code>
+    </ImplementedReturnTypeMismatch>
+    <InvalidNullableReturnType>
+      <code><![CDATA[EventManagerInterface]]></code>
+    </InvalidNullableReturnType>
+    <MissingClosureParamType>
+      <code><![CDATA[$key]]></code>
+      <code><![CDATA[$value]]></code>
+    </MissingClosureParamType>
+    <MixedArgument>
+      <code><![CDATA[$key]]></code>
+      <code><![CDATA[$method]]></code>
+      <code><![CDATA[$subData]]></code>
+    </MixedArgument>
+    <MixedArrayAccess>
+      <code><![CDATA[$this->config[$controllerService][$method . '_COLLECTION']]]></code>
+      <code><![CDATA[$this->config[$controllerService]['input_filter']]]></code>
+    </MixedArrayAccess>
+    <MixedAssignment>
+      <code><![CDATA[$method]]></code>
+      <code><![CDATA[$subData]]></code>
+    </MixedAssignment>
+    <MixedInferredReturnType>
+      <code><![CDATA[InputFilterInterface]]></code>
+      <code><![CDATA[bool]]></code>
+      <code><![CDATA[null|ApiProblemResponse]]></code>
+      <code><![CDATA[string|false]]></code>
+    </MixedInferredReturnType>
+    <MixedReturnStatement>
+      <code><![CDATA[$this->config[$controllerService][$method . '_COLLECTION']]]></code>
+      <code><![CDATA[$this->config[$controllerService][$method]]]></code>
+      <code><![CDATA[$this->config[$controllerService]['input_filter']]]></code>
+      <code><![CDATA[$this->inputFilters[$inputFilterService]]]></code>
+    </MixedReturnStatement>
+    <NullableReturnStatement>
+      <code><![CDATA[$this->events]]></code>
+    </NullableReturnStatement>
+    <ParamNameMismatch>
+      <code><![CDATA[$events]]></code>
+    </ParamNameMismatch>
+    <PossiblyInvalidArgument>
+      <code><![CDATA[$data]]></code>
+    </PossiblyInvalidArgument>
+    <UndefinedClass>
+      <code><![CDATA[V2RouteMatch]]></code>
+    </UndefinedClass>
+    <UndefinedDocblockClass>
+      <code><![CDATA[RouteMatch|V2RouteMatch]]></code>
     </UndefinedDocblockClass>
   </file>
   <file src="src/ContentValidationListenerFactory.php">
-    <DeprecatedInterface occurrences="1">
-      <code>ContentValidationListenerFactory</code>
+    <DeprecatedInterface>
+      <code><![CDATA[ContentValidationListenerFactory]]></code>
     </DeprecatedInterface>
-    <MixedArgument occurrences="3">
-      <code>$config</code>
-      <code>$container-&gt;get('InputFilterManager')</code>
-      <code>$contentValidationConfig</code>
+    <MixedArgument>
+      <code><![CDATA[$config]]></code>
+      <code><![CDATA[$container->get('InputFilterManager')]]></code>
+      <code><![CDATA[$contentValidationConfig]]></code>
     </MixedArgument>
-    <MixedArrayAccess occurrences="2">
-      <code>$config['api-tools-content-validation']</code>
-      <code>$restConfig['route_identifier_name']</code>
+    <MixedArrayAccess>
+      <code><![CDATA[$config['api-tools-content-validation']]]></code>
+      <code><![CDATA[$restConfig['route_identifier_name']]]></code>
     </MixedArrayAccess>
-    <MixedArrayOffset occurrences="1">
-      <code>$restServices[$controllerService]</code>
+    <MixedArrayOffset>
+      <code><![CDATA[$restServices[$controllerService]]]></code>
     </MixedArrayOffset>
-    <MixedAssignment occurrences="5">
-      <code>$config</code>
-      <code>$contentValidationConfig</code>
-      <code>$controllerService</code>
-      <code>$restConfig</code>
-      <code>$restServices[$controllerService]</code>
+    <MixedAssignment>
+      <code><![CDATA[$config]]></code>
+      <code><![CDATA[$contentValidationConfig]]></code>
+      <code><![CDATA[$controllerService]]></code>
+      <code><![CDATA[$restConfig]]></code>
+      <code><![CDATA[$restServices[$controllerService]]]></code>
     </MixedAssignment>
-    <ParamNameMismatch occurrences="1">
-      <code>$container</code>
+    <ParamNameMismatch>
+      <code><![CDATA[$container]]></code>
     </ParamNameMismatch>
   </file>
   <file src="src/Module.php">
-    <MixedInferredReturnType occurrences="1">
-      <code>array</code>
+    <MixedInferredReturnType>
+      <code><![CDATA[array]]></code>
     </MixedInferredReturnType>
-    <MixedMethodCall occurrences="1">
-      <code>attach</code>
+    <MixedMethodCall>
+      <code><![CDATA[attach]]></code>
     </MixedMethodCall>
-    <MixedReturnStatement occurrences="1">
-      <code>include __DIR__ . '/../config/module.config.php'</code>
+    <MixedReturnStatement>
+      <code><![CDATA[include __DIR__ . '/../config/module.config.php']]></code>
     </MixedReturnStatement>
   </file>
   <file src="src/Validator/Db/NoRecordExistsFactory.php">
-    <DeprecatedInterface occurrences="1">
-      <code>NoRecordExistsFactory</code>
+    <DeprecatedClass>
+      <code><![CDATA[NoRecordExists]]></code>
+      <code><![CDATA[NoRecordExists]]></code>
+      <code><![CDATA[NoRecordExists::class]]></code>
+      <code><![CDATA[new NoRecordExists($options)]]></code>
+      <code><![CDATA[new NoRecordExists(ArrayUtils::merge(
+                $options,
+                ['adapter' => $container->get($options['adapter'])]
+            ))]]></code>
+    </DeprecatedClass>
+    <DeprecatedInterface>
+      <code><![CDATA[NoRecordExistsFactory]]></code>
     </DeprecatedInterface>
-    <MixedArgument occurrences="2">
-      <code>$container</code>
-      <code>$options['adapter']</code>
+    <MixedArgument>
+      <code><![CDATA[$container]]></code>
+      <code><![CDATA[$options['adapter']]]></code>
     </MixedArgument>
-    <MixedAssignment occurrences="1">
-      <code>$container</code>
+    <MixedAssignment>
+      <code><![CDATA[$container]]></code>
     </MixedAssignment>
-    <ParamNameMismatch occurrences="1">
-      <code>$validators</code>
+    <ParamNameMismatch>
+      <code><![CDATA[$validators]]></code>
     </ParamNameMismatch>
-    <UndefinedInterfaceMethod occurrences="1">
-      <code>getServiceLocator</code>
+    <UndefinedInterfaceMethod>
+      <code><![CDATA[getServiceLocator]]></code>
     </UndefinedInterfaceMethod>
   </file>
   <file src="src/Validator/Db/RecordExistsFactory.php">
-    <DeprecatedInterface occurrences="1">
-      <code>RecordExistsFactory</code>
+    <DeprecatedClass>
+      <code><![CDATA[RecordExists]]></code>
+      <code><![CDATA[RecordExists]]></code>
+      <code><![CDATA[RecordExists::class]]></code>
+      <code><![CDATA[new RecordExists($options)]]></code>
+      <code><![CDATA[new RecordExists(ArrayUtils::merge(
+                $options,
+                ['adapter' => $container->get($options['adapter'])]
+            ))]]></code>
+    </DeprecatedClass>
+    <DeprecatedInterface>
+      <code><![CDATA[RecordExistsFactory]]></code>
     </DeprecatedInterface>
-    <MixedArgument occurrences="2">
-      <code>$container</code>
-      <code>$options['adapter']</code>
+    <MixedArgument>
+      <code><![CDATA[$container]]></code>
+      <code><![CDATA[$options['adapter']]]></code>
     </MixedArgument>
-    <MixedAssignment occurrences="1">
-      <code>$container</code>
+    <MixedAssignment>
+      <code><![CDATA[$container]]></code>
     </MixedAssignment>
-    <ParamNameMismatch occurrences="1">
-      <code>$validators</code>
+    <ParamNameMismatch>
+      <code><![CDATA[$validators]]></code>
     </ParamNameMismatch>
-    <UndefinedInterfaceMethod occurrences="1">
-      <code>getServiceLocator</code>
+    <UndefinedInterfaceMethod>
+      <code><![CDATA[getServiceLocator]]></code>
     </UndefinedInterfaceMethod>
   </file>
   <file src="test/ContentValidationListenerTest.php">
-    <InvalidArgument occurrences="47">
-      <code>[]</code>
-      <code>[]</code>
-    </InvalidArgument>
-    <MixedArgument occurrences="25">
-      <code>$apiProblemData['detail']</code>
-      <code>$asArray['validation_messages']</code>
-      <code>$asArray['validation_messages']</code>
-      <code>$asArray['validation_messages']</code>
-      <code>$asArray['validation_messages']</code>
-      <code>$asArray['validation_messages'][0]</code>
-      <code>$asArray['validation_messages'][1]</code>
-      <code>$asArray['validation_messages'][2]</code>
-      <code>$messages</code>
-      <code>$messages</code>
-      <code>$messages</code>
-      <code>$messages['bar']</code>
-      <code>$messages['bar']</code>
-      <code>$messages['bar']</code>
-      <code>$messages['foo']</code>
-      <code>$messages['foo']</code>
-      <code>$messages['foo']</code>
-      <code>$messages[0]</code>
-      <code>$messages[0]</code>
-      <code>$messages[0]['bar']</code>
-      <code>$messages[0]['bar']</code>
-      <code>$messages[0]['bar']</code>
-      <code>$messages[0]['foo']</code>
-      <code>$messages[0]['foo']</code>
-      <code>$messages[0]['foo']</code>
+    <DeprecatedMethod>
+      <code><![CDATA[returnValue]]></code>
+      <code><![CDATA[returnValue]]></code>
+      <code><![CDATA[returnValue]]></code>
+      <code><![CDATA[returnValue]]></code>
+      <code><![CDATA[returnValue]]></code>
+    </DeprecatedMethod>
+    <MixedArgument>
+      <code><![CDATA[$apiProblemData['detail']]]></code>
+      <code><![CDATA[$asArray['validation_messages']]]></code>
+      <code><![CDATA[$asArray['validation_messages']]]></code>
+      <code><![CDATA[$asArray['validation_messages']]]></code>
+      <code><![CDATA[$asArray['validation_messages']]]></code>
+      <code><![CDATA[$asArray['validation_messages'][0]]]></code>
+      <code><![CDATA[$asArray['validation_messages'][1]]]></code>
+      <code><![CDATA[$asArray['validation_messages'][2]]]></code>
+      <code><![CDATA[$messages]]></code>
+      <code><![CDATA[$messages]]></code>
+      <code><![CDATA[$messages['bar']]]></code>
+      <code><![CDATA[$messages['bar']]]></code>
+      <code><![CDATA[$messages['bar']]]></code>
+      <code><![CDATA[$messages['foo']]]></code>
+      <code><![CDATA[$messages['foo']]]></code>
+      <code><![CDATA[$messages['foo']]]></code>
+      <code><![CDATA[$messages[0]]]></code>
+      <code><![CDATA[$messages[0]]]></code>
+      <code><![CDATA[$messages[0]['bar']]]></code>
+      <code><![CDATA[$messages[0]['bar']]]></code>
+      <code><![CDATA[$messages[0]['bar']]]></code>
+      <code><![CDATA[$messages[0]['foo']]]></code>
+      <code><![CDATA[$messages[0]['foo']]]></code>
+      <code><![CDATA[$messages[0]['foo']]]></code>
     </MixedArgument>
-    <MixedArrayAccess occurrences="22">
-      <code>$asArray['validation_messages']['bar']</code>
-      <code>$asArray['validation_messages']['foo']</code>
-      <code>$asArray['validation_messages'][0]</code>
-      <code>$asArray['validation_messages'][0]</code>
-      <code>$asArray['validation_messages'][1]</code>
-      <code>$asArray['validation_messages'][1]</code>
-      <code>$asArray['validation_messages'][2]</code>
-      <code>$asArray['validation_messages'][2]</code>
-      <code>$messages['bar']</code>
-      <code>$messages['bar']</code>
-      <code>$messages['bar']</code>
-      <code>$messages['foo']</code>
-      <code>$messages['foo']</code>
-      <code>$messages['foo']</code>
-      <code>$messages[0]</code>
-      <code>$messages[0]</code>
-      <code>$messages[0]</code>
-      <code>$messages[0]</code>
-      <code>$messages[0]</code>
-      <code>$messages[0]</code>
-      <code>$messages[0]</code>
-      <code>$messages[0]</code>
+    <MixedArrayAccess>
+      <code><![CDATA[$asArray['validation_messages']['bar']]]></code>
+      <code><![CDATA[$asArray['validation_messages']['foo']]]></code>
+      <code><![CDATA[$asArray['validation_messages'][0]]]></code>
+      <code><![CDATA[$asArray['validation_messages'][0]]]></code>
+      <code><![CDATA[$asArray['validation_messages'][0]['bar']]]></code>
+      <code><![CDATA[$asArray['validation_messages'][1]]]></code>
+      <code><![CDATA[$asArray['validation_messages'][1]]]></code>
+      <code><![CDATA[$asArray['validation_messages'][1]['bar']]]></code>
+      <code><![CDATA[$asArray['validation_messages'][2]]]></code>
+      <code><![CDATA[$asArray['validation_messages'][2]]]></code>
+      <code><![CDATA[$asArray['validation_messages'][2]['bar']]]></code>
+      <code><![CDATA[$messages[0]['bar']]]></code>
+      <code><![CDATA[$messages[0]['bar']]]></code>
+      <code><![CDATA[$messages[0]['bar']]]></code>
+      <code><![CDATA[$messages[0]['foo']]]></code>
+      <code><![CDATA[$messages[0]['foo']]]></code>
+      <code><![CDATA[$messages[0]['foo']]]></code>
     </MixedArrayAccess>
-    <MixedAssignment occurrences="4">
-      <code>$inputFilter</code>
-      <code>$inputFilter</code>
-      <code>$messages</code>
-      <code>$messages</code>
+    <MixedAssignment>
+      <code><![CDATA[$inputFilter]]></code>
+      <code><![CDATA[$inputFilter]]></code>
+      <code><![CDATA[$messages]]></code>
+      <code><![CDATA[$messages]]></code>
     </MixedAssignment>
-    <MixedMethodCall occurrences="5">
-      <code>getBodyParams</code>
-      <code>getBodyParams</code>
-      <code>getBodyParams</code>
-      <code>getBodyParams</code>
-      <code>getBodyParams</code>
+    <MixedMethodCall>
+      <code><![CDATA[getBodyParams]]></code>
+      <code><![CDATA[getBodyParams]]></code>
+      <code><![CDATA[getBodyParams]]></code>
+      <code><![CDATA[getBodyParams]]></code>
+      <code><![CDATA[getBodyParams]]></code>
     </MixedMethodCall>
-    <PossiblyInvalidArgument occurrences="51">
-      <code>$matches</code>
-      <code>$matches</code>
-      <code>$matches</code>
-      <code>$matches</code>
-      <code>$matches</code>
-      <code>$matches</code>
-      <code>$matches</code>
-      <code>$matches</code>
-      <code>$matches</code>
-      <code>$matches</code>
-      <code>$matches</code>
-      <code>$matches</code>
-      <code>$matches</code>
-      <code>$matches</code>
-      <code>$matches</code>
-      <code>$matches</code>
-      <code>$matches</code>
-      <code>$matches</code>
-      <code>$matches</code>
-      <code>$matches</code>
-      <code>$matches</code>
-      <code>$matches</code>
-      <code>$matches</code>
-      <code>$matches</code>
-      <code>$matches</code>
-      <code>$matches</code>
-      <code>$matches</code>
-      <code>$matches</code>
-      <code>$matches</code>
-      <code>$matches</code>
-      <code>$matches</code>
-      <code>$matches</code>
-      <code>$matches</code>
-      <code>$matches</code>
-      <code>$matches</code>
-      <code>$matches</code>
-      <code>$matches</code>
-      <code>$matches</code>
-      <code>$matches</code>
-      <code>$matches</code>
-      <code>$matches</code>
-      <code>$matches</code>
-      <code>$matches</code>
-      <code>$matches</code>
-      <code>$matches</code>
-      <code>$matches</code>
-      <code>$matches</code>
-      <code>$matches</code>
-      <code>$matches</code>
-      <code>$matches</code>
-      <code>$matches</code>
+    <PossiblyInvalidArgument>
+      <code><![CDATA[$matches]]></code>
+      <code><![CDATA[$matches]]></code>
+      <code><![CDATA[$matches]]></code>
+      <code><![CDATA[$matches]]></code>
+      <code><![CDATA[$matches]]></code>
+      <code><![CDATA[$matches]]></code>
+      <code><![CDATA[$matches]]></code>
+      <code><![CDATA[$matches]]></code>
+      <code><![CDATA[$matches]]></code>
+      <code><![CDATA[$matches]]></code>
+      <code><![CDATA[$matches]]></code>
+      <code><![CDATA[$matches]]></code>
+      <code><![CDATA[$matches]]></code>
+      <code><![CDATA[$matches]]></code>
+      <code><![CDATA[$matches]]></code>
+      <code><![CDATA[$matches]]></code>
+      <code><![CDATA[$matches]]></code>
+      <code><![CDATA[$matches]]></code>
+      <code><![CDATA[$matches]]></code>
+      <code><![CDATA[$matches]]></code>
+      <code><![CDATA[$matches]]></code>
+      <code><![CDATA[$matches]]></code>
+      <code><![CDATA[$matches]]></code>
+      <code><![CDATA[$matches]]></code>
+      <code><![CDATA[$matches]]></code>
+      <code><![CDATA[$matches]]></code>
+      <code><![CDATA[$matches]]></code>
+      <code><![CDATA[$matches]]></code>
+      <code><![CDATA[$matches]]></code>
+      <code><![CDATA[$matches]]></code>
+      <code><![CDATA[$matches]]></code>
+      <code><![CDATA[$matches]]></code>
+      <code><![CDATA[$matches]]></code>
+      <code><![CDATA[$matches]]></code>
+      <code><![CDATA[$matches]]></code>
+      <code><![CDATA[$matches]]></code>
+      <code><![CDATA[$matches]]></code>
+      <code><![CDATA[$matches]]></code>
+      <code><![CDATA[$matches]]></code>
+      <code><![CDATA[$matches]]></code>
+      <code><![CDATA[$matches]]></code>
+      <code><![CDATA[$matches]]></code>
+      <code><![CDATA[$matches]]></code>
+      <code><![CDATA[$matches]]></code>
+      <code><![CDATA[$matches]]></code>
+      <code><![CDATA[$matches]]></code>
+      <code><![CDATA[$matches]]></code>
+      <code><![CDATA[$matches]]></code>
+      <code><![CDATA[$matches]]></code>
+      <code><![CDATA[$matches]]></code>
+      <code><![CDATA[$matches]]></code>
     </PossiblyInvalidArgument>
-    <PossiblyNullReference occurrences="1">
-      <code>invoke</code>
+    <PossiblyNullReference>
+      <code><![CDATA[invoke]]></code>
     </PossiblyNullReference>
-    <TooManyArguments occurrences="2">
-      <code>any</code>
-      <code>any</code>
+    <TooManyArguments>
+      <code><![CDATA[any]]></code>
+      <code><![CDATA[any]]></code>
+      <code><![CDATA[any]]></code>
+      <code><![CDATA[any]]></code>
     </TooManyArguments>
-    <UndefinedDocblockClass occurrences="4">
-      <code>$matches</code>
-      <code>$matches</code>
-      <code>$matches</code>
-      <code>V2RouteMatch|RouteMatch</code>
+    <UndefinedDocblockClass>
+      <code><![CDATA[$matches]]></code>
+      <code><![CDATA[$matches]]></code>
+      <code><![CDATA[$matches]]></code>
+      <code><![CDATA[V2RouteMatch|RouteMatch]]></code>
     </UndefinedDocblockClass>
   </file>
   <file src="test/InputFilter/InputFilterPluginTest.php">
-    <MixedMethodCall occurrences="5">
-      <code>__invoke</code>
-      <code>__invoke</code>
-      <code>__invoke</code>
-      <code>setParam</code>
-      <code>setParam</code>
+    <DeprecatedMethod>
+      <code><![CDATA[returnValue]]></code>
+    </DeprecatedMethod>
+    <MixedMethodCall>
+      <code><![CDATA[__invoke]]></code>
+      <code><![CDATA[__invoke]]></code>
+      <code><![CDATA[__invoke]]></code>
+      <code><![CDATA[setParam]]></code>
+      <code><![CDATA[setParam]]></code>
     </MixedMethodCall>
-    <UndefinedThisPropertyAssignment occurrences="2">
-      <code>$this-&gt;event</code>
-      <code>$this-&gt;plugin</code>
+    <UndefinedThisPropertyAssignment>
+      <code><![CDATA[$this->event]]></code>
+      <code><![CDATA[$this->plugin]]></code>
     </UndefinedThisPropertyAssignment>
-    <UndefinedThisPropertyFetch occurrences="5">
-      <code>$this-&gt;event</code>
-      <code>$this-&gt;event</code>
-      <code>$this-&gt;plugin</code>
-      <code>$this-&gt;plugin</code>
-      <code>$this-&gt;plugin</code>
+    <UndefinedThisPropertyFetch>
+      <code><![CDATA[$this->event]]></code>
+      <code><![CDATA[$this->event]]></code>
+      <code><![CDATA[$this->plugin]]></code>
+      <code><![CDATA[$this->plugin]]></code>
+      <code><![CDATA[$this->plugin]]></code>
     </UndefinedThisPropertyFetch>
   </file>
+  <file src="test/TestAsset/CustomCollectionInputFilter.php">
+    <MissingTemplateParam>
+      <code><![CDATA[CustomCollectionInputFilter]]></code>
+    </MissingTemplateParam>
+  </file>
+  <file src="test/TestAsset/CustomValidationInputFilter.php">
+    <MissingTemplateParam>
+      <code><![CDATA[CustomValidationInputFilter]]></code>
+    </MissingTemplateParam>
+  </file>
   <file src="test/Validator/Db/NoRecordExistsFactoryTest.php">
-    <InvalidPropertyAssignmentValue occurrences="1">
-      <code>$this-&gt;prophesize(Adapter::class)-&gt;reveal()</code>
+    <DeprecatedClass>
+      <code><![CDATA[$validator]]></code>
+      <code><![CDATA[$validator]]></code>
+      <code><![CDATA[NoRecordExists::class]]></code>
+      <code><![CDATA[NoRecordExists::class]]></code>
+    </DeprecatedClass>
+    <InvalidPropertyAssignmentValue>
+      <code><![CDATA[$this->prophesize(Adapter::class)->reveal()]]></code>
     </InvalidPropertyAssignmentValue>
-    <MixedArgument occurrences="1">
-      <code>$config['validators']</code>
+    <MixedArgument>
+      <code><![CDATA[$config['validators']]]></code>
     </MixedArgument>
-    <MixedArrayAccess occurrences="1">
-      <code>$config['validators']</code>
+    <MixedArrayAccess>
+      <code><![CDATA[$config['validators']]]></code>
     </MixedArrayAccess>
-    <MixedAssignment occurrences="1">
-      <code>$config</code>
+    <MixedAssignment>
+      <code><![CDATA[$config]]></code>
     </MixedAssignment>
-    <UndefinedDocblockClass occurrences="1">
-      <code>Adapter&amp;ObjectProphecy</code>
+    <UndefinedDocblockClass>
+      <code><![CDATA[Adapter&ObjectProphecy]]></code>
     </UndefinedDocblockClass>
   </file>
   <file src="test/Validator/Db/RecordExistsFactoryTest.php">
-    <InvalidPropertyAssignmentValue occurrences="1">
-      <code>$this-&gt;prophesize(Adapter::class)-&gt;reveal()</code>
+    <DeprecatedClass>
+      <code><![CDATA[$validator]]></code>
+      <code><![CDATA[$validator]]></code>
+      <code><![CDATA[RecordExists::class]]></code>
+      <code><![CDATA[RecordExists::class]]></code>
+    </DeprecatedClass>
+    <InvalidPropertyAssignmentValue>
+      <code><![CDATA[$this->prophesize(Adapter::class)->reveal()]]></code>
     </InvalidPropertyAssignmentValue>
-    <MixedArgument occurrences="1">
-      <code>$config['validators']</code>
+    <MixedArgument>
+      <code><![CDATA[$config['validators']]]></code>
     </MixedArgument>
-    <MixedArrayAccess occurrences="1">
-      <code>$config['validators']</code>
+    <MixedArrayAccess>
+      <code><![CDATA[$config['validators']]]></code>
     </MixedArrayAccess>
-    <MixedAssignment occurrences="1">
-      <code>$config</code>
+    <MixedAssignment>
+      <code><![CDATA[$config]]></code>
     </MixedAssignment>
   </file>
 </files>

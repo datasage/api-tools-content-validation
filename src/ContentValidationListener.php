@@ -76,10 +76,6 @@ class ContentValidationListener implements ListenerAggregateInterface, EventMana
      */
     protected $restControllers;
 
-    /**
-     * @param array $config
-     * @param array $restControllers
-     */
     public function __construct(
         array $config = [],
         ?ServiceLocatorInterface $inputFilterManager = null,

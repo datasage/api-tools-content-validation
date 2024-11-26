@@ -69,7 +69,7 @@ class ContentValidationListenerTest extends TestCase
     }
 
     /** @psalm-return array<string, array{0: string}> */
-    public function nonBodyMethods(): array
+    public static function nonBodyMethods(): array
     {
         return [
             'get'     => ['GET'],
@@ -1146,7 +1146,7 @@ class ContentValidationListenerTest extends TestCase
      *     3: string
      * }>
      */
-    public function httpMethodSpecificInputFilters(): array
+    public static function httpMethodSpecificInputFilters(): array
     {
         return [
             'post-valid'             => [
@@ -1241,7 +1241,6 @@ class ContentValidationListenerTest extends TestCase
     }
 
     /**
-     * @param array $data
      * @group method-specific
      * @dataProvider httpMethodSpecificInputFilters
      */
@@ -1352,7 +1351,7 @@ class ContentValidationListenerTest extends TestCase
     }
 
     /** @psalm-return array<string, array{0: string}> */
-    public function listMethods(): array
+    public static function listMethods(): array
     {
         return [
             'PUT'   => ['PUT'],
@@ -2132,7 +2131,6 @@ class ContentValidationListenerTest extends TestCase
 
     /**
      * @group 40 removeEmptyData
-     * @param array $eventParams
      * @return MvcEvent
      */
     public function createGroup40Event(array $eventParams)
@@ -2243,7 +2241,7 @@ class ContentValidationListenerTest extends TestCase
     }
 
     /** @psalm-return iterable<string, array{0: bool}> */
-    public function booleanProvider(): iterable
+    public static function booleanProvider(): iterable
     {
         yield 'true'  => [true];
         yield 'false' => [false];
@@ -2664,7 +2662,7 @@ class ContentValidationListenerTest extends TestCase
     }
 
     /** @psalm-return array<string, array{0: array}> */
-    public function indexedFields(): array
+    public static function indexedFields(): array
     {
         return [
             'flat-array'   => [[['foo'], ['bar']]],
@@ -2682,7 +2680,6 @@ class ContentValidationListenerTest extends TestCase
      * What we observed is that the data was being duplicated, as the data and the
      * unknown values were identical.
      *
-     * @param array $params
      * @dataProvider indexedFields
      */
     public function testWhenNoFieldsAreDefinedAndValidatorPassesIndexedArrayDataShouldNotBeDuplicated(
