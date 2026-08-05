@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<files psalm-version="5.26.1@d747f6500b38ac4f7dfc5edbcae6e4b637d7add0">
+<files psalm-version="6.16.1@f1f5de594dc76faf8784e02d3dc4716c91c6f6ac">
   <file src="config/module.config.php">
     <UndefinedClass>
       <code><![CDATA[InputFilterPlugin]]></code>
@@ -9,6 +9,9 @@
     <ArgumentTypeCoercion>
       <code><![CDATA[$validationGroup]]></code>
     </ArgumentTypeCoercion>
+    <ClassMustBeFinal>
+      <code><![CDATA[ContentValidationListener]]></code>
+    </ClassMustBeFinal>
     <ImplementedReturnTypeMismatch>
       <code><![CDATA[ContentValidationListener]]></code>
     </ImplementedReturnTypeMismatch>
@@ -19,6 +22,11 @@
       <code><![CDATA[$key]]></code>
       <code><![CDATA[$value]]></code>
     </MissingClosureParamType>
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function attach(EventManagerInterface $events, $priority = 1)]]></code>
+      <code><![CDATA[public function getEventManager()]]></code>
+      <code><![CDATA[public function setEventManager(EventManagerInterface $events)]]></code>
+    </MissingOverrideAttribute>
     <MixedArgument>
       <code><![CDATA[$key]]></code>
       <code><![CDATA[$method]]></code>
@@ -32,12 +40,6 @@
       <code><![CDATA[$method]]></code>
       <code><![CDATA[$subData]]></code>
     </MixedAssignment>
-    <MixedInferredReturnType>
-      <code><![CDATA[InputFilterInterface]]></code>
-      <code><![CDATA[bool]]></code>
-      <code><![CDATA[null|ApiProblemResponse]]></code>
-      <code><![CDATA[string|false]]></code>
-    </MixedInferredReturnType>
     <MixedReturnStatement>
       <code><![CDATA[$this->config[$controllerService][$method . '_COLLECTION']]]></code>
       <code><![CDATA[$this->config[$controllerService][$method]]]></code>
@@ -53,6 +55,26 @@
     <PossiblyInvalidArgument>
       <code><![CDATA[$data]]></code>
     </PossiblyInvalidArgument>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[allowsOnlyFieldsInFilter]]></code>
+      <code><![CDATA[getInputFilter]]></code>
+      <code><![CDATA[getInputFilterService]]></code>
+      <code><![CDATA[hasInputFilter]]></code>
+      <code><![CDATA[isCollection]]></code>
+      <code><![CDATA[removeEmptyData]]></code>
+      <code><![CDATA[shouldRemoveEmptyData]]></code>
+      <code><![CDATA[useRawData]]></code>
+      <code><![CDATA[validatePatch]]></code>
+    </PossiblyUnusedMethod>
+    <PossiblyUnusedParam>
+      <code><![CDATA[$data]]></code>
+      <code><![CDATA[$matches]]></code>
+      <code><![CDATA[$request]]></code>
+      <code><![CDATA[$serviceName]]></code>
+    </PossiblyUnusedParam>
+    <PossiblyUnusedProperty>
+      <code><![CDATA[$restControllers]]></code>
+    </PossiblyUnusedProperty>
     <UndefinedClass>
       <code><![CDATA[V2RouteMatch]]></code>
     </UndefinedClass>
@@ -61,9 +83,16 @@
     </UndefinedDocblockClass>
   </file>
   <file src="src/ContentValidationListenerFactory.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[ContentValidationListenerFactory]]></code>
+    </ClassMustBeFinal>
     <DeprecatedInterface>
       <code><![CDATA[ContentValidationListenerFactory]]></code>
     </DeprecatedInterface>
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function __invoke(ContainerInterface $container, $requestedName, ?array $options = null)]]></code>
+      <code><![CDATA[public function createService(ServiceLocatorInterface $container)]]></code>
+    </MissingOverrideAttribute>
     <MixedArgument>
       <code><![CDATA[$config]]></code>
       <code><![CDATA[$container->get('InputFilterManager')]]></code>
@@ -87,18 +116,29 @@
       <code><![CDATA[$container]]></code>
     </ParamNameMismatch>
   </file>
+  <file src="src/InputFilter/InputFilterPlugin.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[InputFilterPlugin]]></code>
+    </ClassMustBeFinal>
+  </file>
   <file src="src/Module.php">
-    <MixedInferredReturnType>
-      <code><![CDATA[array]]></code>
-    </MixedInferredReturnType>
+    <ClassMustBeFinal>
+      <code><![CDATA[Module]]></code>
+    </ClassMustBeFinal>
     <MixedMethodCall>
       <code><![CDATA[attach]]></code>
     </MixedMethodCall>
     <MixedReturnStatement>
       <code><![CDATA[include __DIR__ . '/../config/module.config.php']]></code>
     </MixedReturnStatement>
+    <UnusedClass>
+      <code><![CDATA[Module]]></code>
+    </UnusedClass>
   </file>
   <file src="src/Validator/Db/NoRecordExistsFactory.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[NoRecordExistsFactory]]></code>
+    </ClassMustBeFinal>
     <DeprecatedClass>
       <code><![CDATA[NoRecordExists]]></code>
       <code><![CDATA[NoRecordExists]]></code>
@@ -112,6 +152,10 @@
     <DeprecatedInterface>
       <code><![CDATA[NoRecordExistsFactory]]></code>
     </DeprecatedInterface>
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function __invoke(ContainerInterface $container, $requestedName, ?array $options = null)]]></code>
+      <code><![CDATA[public function createService(ServiceLocatorInterface $validators)]]></code>
+    </MissingOverrideAttribute>
     <MixedArgument>
       <code><![CDATA[$container]]></code>
       <code><![CDATA[$options['adapter']]]></code>
@@ -122,11 +166,17 @@
     <ParamNameMismatch>
       <code><![CDATA[$validators]]></code>
     </ParamNameMismatch>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[setCreationOptions]]></code>
+    </PossiblyUnusedMethod>
     <UndefinedInterfaceMethod>
       <code><![CDATA[getServiceLocator]]></code>
     </UndefinedInterfaceMethod>
   </file>
   <file src="src/Validator/Db/RecordExistsFactory.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[RecordExistsFactory]]></code>
+    </ClassMustBeFinal>
     <DeprecatedClass>
       <code><![CDATA[RecordExists]]></code>
       <code><![CDATA[RecordExists]]></code>
@@ -140,6 +190,10 @@
     <DeprecatedInterface>
       <code><![CDATA[RecordExistsFactory]]></code>
     </DeprecatedInterface>
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function __invoke(ContainerInterface $container, $requestedName, ?array $options = null)]]></code>
+      <code><![CDATA[public function createService(ServiceLocatorInterface $validators)]]></code>
+    </MissingOverrideAttribute>
     <MixedArgument>
       <code><![CDATA[$container]]></code>
       <code><![CDATA[$options['adapter']]]></code>
@@ -150,11 +204,17 @@
     <ParamNameMismatch>
       <code><![CDATA[$validators]]></code>
     </ParamNameMismatch>
+    <PossiblyUnusedMethod>
+      <code><![CDATA[setCreationOptions]]></code>
+    </PossiblyUnusedMethod>
     <UndefinedInterfaceMethod>
       <code><![CDATA[getServiceLocator]]></code>
     </UndefinedInterfaceMethod>
   </file>
   <file src="test/ContentValidationListenerTest.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[ContentValidationListenerTest]]></code>
+    </ClassMustBeFinal>
     <DeprecatedMethod>
       <code><![CDATA[returnValue]]></code>
       <code><![CDATA[returnValue]]></code>
@@ -162,6 +222,25 @@
       <code><![CDATA[returnValue]]></code>
       <code><![CDATA[returnValue]]></code>
     </DeprecatedMethod>
+    <InaccessibleProperty>
+      <code><![CDATA[$innerProblem->detail]]></code>
+      <code><![CDATA[$innerProblem->status]]></code>
+      <code><![CDATA[$response->getApiProblem()->detail]]></code>
+      <code><![CDATA[$response->getApiProblem()->detail]]></code>
+      <code><![CDATA[$response->getApiProblem()->status]]></code>
+      <code><![CDATA[$response->getApiProblem()->status]]></code>
+      <code><![CDATA[$response->getApiProblem()->status]]></code>
+      <code><![CDATA[$response->getApiProblem()->status]]></code>
+      <code><![CDATA[$response->getApiProblem()->status]]></code>
+      <code><![CDATA[$response->getApiProblem()->status]]></code>
+      <code><![CDATA[$response->getApiProblem()->status]]></code>
+      <code><![CDATA[$response->getApiProblem()->status]]></code>
+      <code><![CDATA[$response->getApiProblem()->status]]></code>
+      <code><![CDATA[$response->getApiProblem()->status]]></code>
+      <code><![CDATA[$response->getApiProblem()->status]]></code>
+      <code><![CDATA[$result->getApiProblem()->detail]]></code>
+      <code><![CDATA[$result->getApiProblem()->status]]></code>
+    </InaccessibleProperty>
     <MixedArgument>
       <code><![CDATA[$apiProblemData['detail']]]></code>
       <code><![CDATA[$asArray['validation_messages']]]></code>
@@ -288,41 +367,48 @@
       <code><![CDATA[$matches]]></code>
       <code><![CDATA[V2RouteMatch|RouteMatch]]></code>
     </UndefinedDocblockClass>
+    <UndefinedMagicPropertyFetch>
+      <code><![CDATA[$response->getApiProblem()->validation_messages]]></code>
+      <code><![CDATA[$response->getApiProblem()->validation_messages]]></code>
+    </UndefinedMagicPropertyFetch>
   </file>
   <file src="test/InputFilter/InputFilterPluginTest.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[InputFilterPluginTest]]></code>
+    </ClassMustBeFinal>
     <DeprecatedMethod>
       <code><![CDATA[returnValue]]></code>
     </DeprecatedMethod>
-    <MixedMethodCall>
-      <code><![CDATA[__invoke]]></code>
-      <code><![CDATA[__invoke]]></code>
-      <code><![CDATA[__invoke]]></code>
-      <code><![CDATA[setParam]]></code>
-      <code><![CDATA[setParam]]></code>
-    </MixedMethodCall>
-    <UndefinedThisPropertyAssignment>
-      <code><![CDATA[$this->event]]></code>
-      <code><![CDATA[$this->plugin]]></code>
-    </UndefinedThisPropertyAssignment>
-    <UndefinedThisPropertyFetch>
-      <code><![CDATA[$this->event]]></code>
-      <code><![CDATA[$this->event]]></code>
-      <code><![CDATA[$this->plugin]]></code>
-      <code><![CDATA[$this->plugin]]></code>
-      <code><![CDATA[$this->plugin]]></code>
-    </UndefinedThisPropertyFetch>
+    <MissingOverrideAttribute>
+      <code><![CDATA[protected function setUp(): void]]></code>
+    </MissingOverrideAttribute>
   </file>
   <file src="test/TestAsset/CustomCollectionInputFilter.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[CustomCollectionInputFilter]]></code>
+    </ClassMustBeFinal>
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function isValid($context = null): bool]]></code>
+    </MissingOverrideAttribute>
     <MissingTemplateParam>
       <code><![CDATA[CustomCollectionInputFilter]]></code>
     </MissingTemplateParam>
   </file>
   <file src="test/TestAsset/CustomValidationInputFilter.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[CustomValidationInputFilter]]></code>
+    </ClassMustBeFinal>
+    <MissingOverrideAttribute>
+      <code><![CDATA[public function isValid($context = null)]]></code>
+    </MissingOverrideAttribute>
     <MissingTemplateParam>
       <code><![CDATA[CustomValidationInputFilter]]></code>
     </MissingTemplateParam>
   </file>
   <file src="test/Validator/Db/NoRecordExistsFactoryTest.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[NoRecordExistsFactoryTest]]></code>
+    </ClassMustBeFinal>
     <DeprecatedClass>
       <code><![CDATA[$validator]]></code>
       <code><![CDATA[$validator]]></code>
@@ -332,6 +418,9 @@
     <InvalidPropertyAssignmentValue>
       <code><![CDATA[$this->prophesize(Adapter::class)->reveal()]]></code>
     </InvalidPropertyAssignmentValue>
+    <MissingOverrideAttribute>
+      <code><![CDATA[protected function setUp(): void]]></code>
+    </MissingOverrideAttribute>
     <MixedArgument>
       <code><![CDATA[$config['validators']]]></code>
     </MixedArgument>
@@ -346,6 +435,9 @@
     </UndefinedDocblockClass>
   </file>
   <file src="test/Validator/Db/RecordExistsFactoryTest.php">
+    <ClassMustBeFinal>
+      <code><![CDATA[RecordExistsFactoryTest]]></code>
+    </ClassMustBeFinal>
     <DeprecatedClass>
       <code><![CDATA[$validator]]></code>
       <code><![CDATA[$validator]]></code>
@@ -355,6 +447,9 @@
     <InvalidPropertyAssignmentValue>
       <code><![CDATA[$this->prophesize(Adapter::class)->reveal()]]></code>
     </InvalidPropertyAssignmentValue>
+    <MissingOverrideAttribute>
+      <code><![CDATA[protected function setUp(): void]]></code>
+    </MissingOverrideAttribute>
     <MixedArgument>
       <code><![CDATA[$config['validators']]]></code>
     </MixedArgument>
