@@ -22,11 +22,6 @@
       <code><![CDATA[$key]]></code>
       <code><![CDATA[$value]]></code>
     </MissingClosureParamType>
-    <MissingOverrideAttribute>
-      <code><![CDATA[public function attach(EventManagerInterface $events, $priority = 1)]]></code>
-      <code><![CDATA[public function getEventManager()]]></code>
-      <code><![CDATA[public function setEventManager(EventManagerInterface $events)]]></code>
-    </MissingOverrideAttribute>
     <MixedArgument>
       <code><![CDATA[$key]]></code>
       <code><![CDATA[$method]]></code>
@@ -89,10 +84,6 @@
     <DeprecatedInterface>
       <code><![CDATA[ContentValidationListenerFactory]]></code>
     </DeprecatedInterface>
-    <MissingOverrideAttribute>
-      <code><![CDATA[public function __invoke(ContainerInterface $container, $requestedName, ?array $options = null)]]></code>
-      <code><![CDATA[public function createService(ServiceLocatorInterface $container)]]></code>
-    </MissingOverrideAttribute>
     <MixedArgument>
       <code><![CDATA[$config]]></code>
       <code><![CDATA[$container->get('InputFilterManager')]]></code>
@@ -152,10 +143,6 @@
     <DeprecatedInterface>
       <code><![CDATA[NoRecordExistsFactory]]></code>
     </DeprecatedInterface>
-    <MissingOverrideAttribute>
-      <code><![CDATA[public function __invoke(ContainerInterface $container, $requestedName, ?array $options = null)]]></code>
-      <code><![CDATA[public function createService(ServiceLocatorInterface $validators)]]></code>
-    </MissingOverrideAttribute>
     <MixedArgument>
       <code><![CDATA[$container]]></code>
       <code><![CDATA[$options['adapter']]]></code>
@@ -190,10 +177,6 @@
     <DeprecatedInterface>
       <code><![CDATA[RecordExistsFactory]]></code>
     </DeprecatedInterface>
-    <MissingOverrideAttribute>
-      <code><![CDATA[public function __invoke(ContainerInterface $container, $requestedName, ?array $options = null)]]></code>
-      <code><![CDATA[public function createService(ServiceLocatorInterface $validators)]]></code>
-    </MissingOverrideAttribute>
     <MixedArgument>
       <code><![CDATA[$container]]></code>
       <code><![CDATA[$options['adapter']]]></code>
@@ -215,13 +198,6 @@
     <ClassMustBeFinal>
       <code><![CDATA[ContentValidationListenerTest]]></code>
     </ClassMustBeFinal>
-    <DeprecatedMethod>
-      <code><![CDATA[returnValue]]></code>
-      <code><![CDATA[returnValue]]></code>
-      <code><![CDATA[returnValue]]></code>
-      <code><![CDATA[returnValue]]></code>
-      <code><![CDATA[returnValue]]></code>
-    </DeprecatedMethod>
     <InaccessibleProperty>
       <code><![CDATA[$innerProblem->detail]]></code>
       <code><![CDATA[$innerProblem->status]]></code>
@@ -267,6 +243,9 @@
       <code><![CDATA[$messages[0]['foo']]]></code>
       <code><![CDATA[$messages[0]['foo']]]></code>
     </MixedArgument>
+    <MixedArgumentTypeCoercion>
+      <code><![CDATA[$messages]]></code>
+    </MixedArgumentTypeCoercion>
     <MixedArrayAccess>
       <code><![CDATA[$asArray['validation_messages']['bar']]]></code>
       <code><![CDATA[$asArray['validation_messages']['foo']]]></code>
@@ -358,8 +337,6 @@
     <TooManyArguments>
       <code><![CDATA[any]]></code>
       <code><![CDATA[any]]></code>
-      <code><![CDATA[any]]></code>
-      <code><![CDATA[any]]></code>
     </TooManyArguments>
     <UndefinedDocblockClass>
       <code><![CDATA[$matches]]></code>
@@ -376,20 +353,11 @@
     <ClassMustBeFinal>
       <code><![CDATA[InputFilterPluginTest]]></code>
     </ClassMustBeFinal>
-    <DeprecatedMethod>
-      <code><![CDATA[returnValue]]></code>
-    </DeprecatedMethod>
-    <MissingOverrideAttribute>
-      <code><![CDATA[protected function setUp(): void]]></code>
-    </MissingOverrideAttribute>
   </file>
   <file src="test/TestAsset/CustomCollectionInputFilter.php">
     <ClassMustBeFinal>
       <code><![CDATA[CustomCollectionInputFilter]]></code>
     </ClassMustBeFinal>
-    <MissingOverrideAttribute>
-      <code><![CDATA[public function isValid($context = null): bool]]></code>
-    </MissingOverrideAttribute>
     <MissingTemplateParam>
       <code><![CDATA[CustomCollectionInputFilter]]></code>
     </MissingTemplateParam>
@@ -398,9 +366,6 @@
     <ClassMustBeFinal>
       <code><![CDATA[CustomValidationInputFilter]]></code>
     </ClassMustBeFinal>
-    <MissingOverrideAttribute>
-      <code><![CDATA[public function isValid($context = null)]]></code>
-    </MissingOverrideAttribute>
     <MissingTemplateParam>
       <code><![CDATA[CustomValidationInputFilter]]></code>
     </MissingTemplateParam>
@@ -418,9 +383,6 @@
     <InvalidPropertyAssignmentValue>
       <code><![CDATA[$this->prophesize(Adapter::class)->reveal()]]></code>
     </InvalidPropertyAssignmentValue>
-    <MissingOverrideAttribute>
-      <code><![CDATA[protected function setUp(): void]]></code>
-    </MissingOverrideAttribute>
     <MixedArgument>
       <code><![CDATA[$config['validators']]]></code>
     </MixedArgument>
@@ -447,9 +409,6 @@
     <InvalidPropertyAssignmentValue>
       <code><![CDATA[$this->prophesize(Adapter::class)->reveal()]]></code>
     </InvalidPropertyAssignmentValue>
-    <MissingOverrideAttribute>
-      <code><![CDATA[protected function setUp(): void]]></code>
-    </MissingOverrideAttribute>
     <MixedArgument>
       <code><![CDATA[$config['validators']]]></code>
     </MixedArgument>

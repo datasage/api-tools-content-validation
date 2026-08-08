@@ -6,6 +6,7 @@ namespace Laminas\ApiTools\ContentValidation;
 
 use Laminas\ServiceManager\FactoryInterface;
 use Laminas\ServiceManager\ServiceLocatorInterface;
+use Override;
 use Psr\Container\ContainerInterface;
 
 class ContentValidationListenerFactory implements FactoryInterface
@@ -17,6 +18,7 @@ class ContentValidationListenerFactory implements FactoryInterface
      * @param array|null $options
      * @return ContentValidationListener
      */
+    #[Override]
     public function __invoke(ContainerInterface $container, $requestedName, ?array $options = null)
     {
         $config                  = $container->has('config') ? $container->get('config') : [];
@@ -37,6 +39,7 @@ class ContentValidationListenerFactory implements FactoryInterface
      *
      * @return ContentValidationListener
      */
+    #[Override]
     public function createService(ServiceLocatorInterface $container)
     {
         return $this($container, ContentValidationListener::class);
