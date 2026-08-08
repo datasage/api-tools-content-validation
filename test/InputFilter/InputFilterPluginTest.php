@@ -23,10 +23,8 @@ class InputFilterPluginTest extends TestCase
 
         $this->event = $event = new MvcEvent();
 
-        $controller = $this->getMockBuilder(AbstractController::class)->getMock();
-        $controller->expects($this->any())
-            ->method('getEvent')
-            ->willReturn($event);
+        $controller = $this->createStub(AbstractController::class);
+        $controller->method('getEvent')->willReturn($event);
 
         $this->plugin = new InputFilterPlugin();
         $this->plugin->setController($controller);
@@ -45,7 +43,7 @@ class InputFilterPluginTest extends TestCase
 
     public function testValidInputFilterInEventIsReturnedByPlugin(): void
     {
-        $inputFilter = $this->getMockBuilder(InputFilterInterface::class)->getMock();
+        $inputFilter = $this->createStub(InputFilterInterface::class);
         $this->event->setParam('Laminas\ApiTools\ContentValidation\InputFilter', $inputFilter);
         $this->assertSame($inputFilter, $this->plugin->__invoke());
     }
