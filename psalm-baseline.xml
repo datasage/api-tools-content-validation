@@ -334,10 +334,6 @@
     <PossiblyNullReference>
       <code><![CDATA[invoke]]></code>
     </PossiblyNullReference>
-    <TooManyArguments>
-      <code><![CDATA[any]]></code>
-      <code><![CDATA[any]]></code>
-    </TooManyArguments>
     <UndefinedDocblockClass>
       <code><![CDATA[$matches]]></code>
       <code><![CDATA[$matches]]></code>

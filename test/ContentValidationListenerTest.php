@@ -1317,10 +1317,6 @@ class ContentValidationListenerTest extends TestCase
         $event->setRouteMatch($matches);
         $event->setParam('LaminasContentNegotiationParameterData', $dataContainer);
 
-        $validator->expects($this->any())
-            ->method('has')
-            ->with($this->equalTo('FooValidator'))
-            ->willReturn(true);
         $validator->expects($this->once())
             ->method('setData')
             ->with($this->equalTo(ArrayUtils::merge($data, $files->toArray(), true)));
@@ -1818,16 +1814,10 @@ class ContentValidationListenerTest extends TestCase
     public function testShouldSaveFilteredDataWhenRequiredEvenIfInputFilterIsNotUnknownInputsCapable(): void
     {
         $services    = new ServiceManager();
-        $inputFilter = $this->getMockBuilder(InputFilterInterface::class)->getMock();
-        $inputFilter->expects($this->any())
-            ->method('setData')
-            ->willReturn(null);
-        $inputFilter->expects($this->any(''))
-            ->method('isValid')
-            ->willReturn(true);
-        $inputFilter->expects($this->any(''))
-            ->method('getValues')
-            ->willReturn(['foo' => 'abc']);
+        $inputFilter = $this->createStub(InputFilterInterface::class);
+        $inputFilter->method('setData')->willReturn(null);
+        $inputFilter->method('isValid')->willReturn(true);
+        $inputFilter->method('getValues')->willReturn(['foo' => 'abc']);
 
         new InputFilterFactory();
         $services->setService('FooFilter', $inputFilter);
