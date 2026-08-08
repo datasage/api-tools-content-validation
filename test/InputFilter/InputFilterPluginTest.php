@@ -8,6 +8,7 @@ use Laminas\ApiTools\ContentValidation\InputFilter\InputFilterPlugin;
 use Laminas\InputFilter\InputFilterInterface;
 use Laminas\Mvc\Controller\AbstractController;
 use Laminas\Mvc\MvcEvent;
+use Override;
 use PHPUnit\Framework\TestCase;
 
 class InputFilterPluginTest extends TestCase
@@ -15,6 +16,7 @@ class InputFilterPluginTest extends TestCase
     protected MvcEvent $event;
     protected InputFilterPlugin $plugin;
 
+    #[Override]
     protected function setUp(): void
     {
         parent::setUp();
@@ -24,7 +26,7 @@ class InputFilterPluginTest extends TestCase
         $controller = $this->getMockBuilder(AbstractController::class)->getMock();
         $controller->expects($this->any())
             ->method('getEvent')
-            ->will($this->returnValue($event));
+            ->willReturn($event);
 
         $this->plugin = new InputFilterPlugin();
         $this->plugin->setController($controller);

@@ -8,6 +8,7 @@ use Laminas\ServiceManager\FactoryInterface;
 use Laminas\ServiceManager\ServiceLocatorInterface;
 use Laminas\Stdlib\ArrayUtils;
 use Laminas\Validator\Db\RecordExists;
+use Override;
 use Psr\Container\ContainerInterface;
 
 class RecordExistsFactory implements FactoryInterface
@@ -26,6 +27,7 @@ class RecordExistsFactory implements FactoryInterface
      * @param null|array $options
      * @return RecordExists
      */
+    #[Override]
     public function __invoke(ContainerInterface $container, $requestedName, ?array $options = null)
     {
         if (isset($options['adapter'])) {
@@ -45,6 +47,7 @@ class RecordExistsFactory implements FactoryInterface
      *
      * @return RecordExists
      */
+    #[Override]
     public function createService(ServiceLocatorInterface $validators)
     {
         $container = $validators->getServiceLocator() ?: $validators;

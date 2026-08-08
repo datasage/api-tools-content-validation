@@ -8,6 +8,7 @@ use Laminas\Db\Adapter\Adapter;
 use Laminas\ServiceManager\ServiceManager;
 use Laminas\Validator\Db\RecordExists;
 use Laminas\Validator\ValidatorPluginManager;
+use Override;
 use PHPUnit\Framework\TestCase;
 use Prophecy\PhpUnit\ProphecyTrait;
 use Prophecy\Prophecy\ObjectProphecy;
@@ -22,6 +23,7 @@ class RecordExistsFactoryTest extends TestCase
     /** @var Adapter&ObjectProphecy */
     protected $adapter;
 
+    #[Override]
     protected function setUp(): void
     {
         parent::setUp();

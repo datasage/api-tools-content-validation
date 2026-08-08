@@ -23,6 +23,7 @@ use Laminas\Mvc\Router\RouteMatch as V2RouteMatch;
 use Laminas\Router\RouteMatch;
 use Laminas\ServiceManager\ServiceLocatorInterface;
 use Laminas\Stdlib\ArrayUtils;
+use Override;
 
 use function array_filter;
 use function array_key_exists;
@@ -100,6 +101,7 @@ class ContentValidationListener implements ListenerAggregateInterface, EventMana
      *
      * @return ContentValidationListener
      */
+    #[Override]
     public function setEventManager(EventManagerInterface $events)
     {
         $events->addIdentifiers([
@@ -119,6 +121,7 @@ class ContentValidationListener implements ListenerAggregateInterface, EventMana
      *
      * @return EventManagerInterface
      */
+    #[Override]
     public function getEventManager()
     {
         if (null === $this->events) {
@@ -132,6 +135,7 @@ class ContentValidationListener implements ListenerAggregateInterface, EventMana
      *
      * @param int $priority
      */
+    #[Override]
     public function attach(EventManagerInterface $events, $priority = 1)
     {
         // trigger after authentication/authorization and content negotiation
