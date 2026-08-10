@@ -41,7 +41,6 @@
         "laminas/laminas-router": "^3.16",
         "laminas/laminas-servicemanager": "^3.24",
         "laminas/laminas-stdlib": "^3.21",
-        "laminas/laminas-validator": "^2.65",
         "php": "~8.2.0 || ~8.3.0 || ~8.4.0 || ~8.5.0",
         "psr/container": "^1.1 || ^2.0"
     },
@@ -49,6 +48,7 @@
         "laminas/laminas-coding-standard": "^3.1",
         "laminas/laminas-db": "^2.8.1",
         "laminas/laminas-filter": "^2.42",
+        "laminas/laminas-validator": "^2.65",
         "phpspec/prophecy-phpunit": "^2.0",
         "phpunit/phpunit": "^11.0 || ^12.0 || ^13.0",
         "psalm/plugin-phpunit": "^0.19",

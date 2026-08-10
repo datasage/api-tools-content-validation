@@ -120,44 +120,6 @@
       <code><![CDATA[Module]]></code>
     </UnusedClass>
   </file>
-  <file src="src/Validator/Db/NoRecordExistsFactory.php">
-    <ClassMustBeFinal>
-      <code><![CDATA[NoRecordExistsFactory]]></code>
-    </ClassMustBeFinal>
-    <DeprecatedClass>
-      <code><![CDATA[NoRecordExists]]></code>
-      <code><![CDATA[new NoRecordExists($options)]]></code>
-      <code><![CDATA[new NoRecordExists(ArrayUtils::merge(
-                $options,
-                ['adapter' => $container->get($options['adapter'])]
-            ))]]></code>
-    </DeprecatedClass>
-    <MixedArgument>
-      <code><![CDATA[$options['adapter']]]></code>
-    </MixedArgument>
-    <UnusedProperty>
-      <code><![CDATA[$options]]></code>
-    </UnusedProperty>
-  </file>
-  <file src="src/Validator/Db/RecordExistsFactory.php">
-    <ClassMustBeFinal>
-      <code><![CDATA[RecordExistsFactory]]></code>
-    </ClassMustBeFinal>
-    <DeprecatedClass>
-      <code><![CDATA[RecordExists]]></code>
-      <code><![CDATA[new RecordExists($options)]]></code>
-      <code><![CDATA[new RecordExists(ArrayUtils::merge(
-                $options,
-                ['adapter' => $container->get($options['adapter'])]
-            ))]]></code>
-    </DeprecatedClass>
-    <MixedArgument>
-      <code><![CDATA[$options['adapter']]]></code>
-    </MixedArgument>
-    <UnusedProperty>
-      <code><![CDATA[$options]]></code>
-    </UnusedProperty>
-  </file>
   <file src="test/ContentValidationListenerTest.php">
     <ClassMustBeFinal>
       <code><![CDATA[ContentValidationListenerTest]]></code>
@@ -329,54 +291,5 @@
     <MissingTemplateParam>
       <code><![CDATA[CustomValidationInputFilter]]></code>
     </MissingTemplateParam>
-  </file>
-  <file src="test/Validator/Db/NoRecordExistsFactoryTest.php">
-    <ClassMustBeFinal>
-      <code><![CDATA[NoRecordExistsFactoryTest]]></code>
-    </ClassMustBeFinal>
-    <DeprecatedClass>
-      <code><![CDATA[$validator]]></code>
-      <code><![CDATA[$validator]]></code>
-      <code><![CDATA[NoRecordExists::class]]></code>
-      <code><![CDATA[NoRecordExists::class]]></code>
-    </DeprecatedClass>
-    <InvalidPropertyAssignmentValue>
-      <code><![CDATA[$this->prophesize(Adapter::class)->reveal()]]></code>
-    </InvalidPropertyAssignmentValue>
-    <MixedArgument>
-      <code><![CDATA[$config['validators']]]></code>
-    </MixedArgument>
-    <MixedArrayAccess>
-      <code><![CDATA[$config['validators']]]></code>
-    </MixedArrayAccess>
-    <MixedAssignment>
-      <code><![CDATA[$config]]></code>
-    </MixedAssignment>
-    <UndefinedDocblockClass>
-      <code><![CDATA[Adapter&ObjectProphecy]]></code>
-    </UndefinedDocblockClass>
-  </file>
-  <file src="test/Validator/Db/RecordExistsFactoryTest.php">
-    <ClassMustBeFinal>
-      <code><![CDATA[RecordExistsFactoryTest]]></code>
-    </ClassMustBeFinal>
-    <DeprecatedClass>
-      <code><![CDATA[$validator]]></code>
-      <code><![CDATA[$validator]]></code>
-      <code><![CDATA[RecordExists::class]]></code>
-      <code><![CDATA[RecordExists::class]]></code>
-    </DeprecatedClass>
-    <InvalidPropertyAssignmentValue>
-      <code><![CDATA[$this->prophesize(Adapter::class)->reveal()]]></code>
-    </InvalidPropertyAssignmentValue>
-    <MixedArgument>
-      <code><![CDATA[$config['validators']]]></code>
-    </MixedArgument>
-    <MixedArrayAccess>
-      <code><![CDATA[$config['validators']]]></code>
-    </MixedArrayAccess>
-    <MixedAssignment>
-      <code><![CDATA[$config]]></code>
-    </MixedAssignment>
   </file>
 </files>

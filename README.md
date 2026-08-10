@@ -214,12 +214,6 @@ return [
             ContentValidationListener::class => ContentValidationListenerFactory::class,
         ],
     ],
-    'validators' => [
-        'factories' => [
-            'Laminas\ApiTools\ContentValidation\Validator\DbRecordExists' => Validator\Db\RecordExistsFactory::class,
-            'Laminas\ApiTools\ContentValidation\Validator\DbNoRecordExists' => Validator\Db\NoRecordExistsFactory::class,
-        ],
-    ],
 ];
 ```
 
