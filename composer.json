@@ -33,11 +33,11 @@
     },
     "require": {
         "laminas-api-tools/api-tools-api-problem": "^1.10",
-        "laminas-api-tools/api-tools-content-negotiation": "^1.11",
+        "laminas-api-tools/api-tools-content-negotiation": "^1.11 || ^2.0",
         "laminas/laminas-eventmanager": "^3.15",
         "laminas/laminas-http": "^2.23 || ^3.0",
         "laminas/laminas-inputfilter": "^2.34",
-        "laminas/laminas-mvc": "^3.8",
+        "laminas/laminas-mvc": "^3.8 || ^4.0",
         "laminas/laminas-router": "^3.16",
         "laminas/laminas-servicemanager": "^3.24",
         "laminas/laminas-stdlib": "^3.21",
