@@ -4,8 +4,7 @@ declare(strict_types=1);
 
 namespace Laminas\ApiTools\ContentValidation;
 
-use Laminas\ServiceManager\FactoryInterface;
-use Laminas\ServiceManager\ServiceLocatorInterface;
+use Laminas\ServiceManager\Factory\FactoryInterface;
 use Override;
 use Psr\Container\ContainerInterface;
 
@@ -30,19 +29,6 @@ class ContentValidationListenerFactory implements FactoryInterface
             $container->get('InputFilterManager'),
             $restServices
         );
-    }
-
-    /**
-     * Create and return a ContentValidationListener instance (v2).
-     *
-     * Provided for backwards compatibility; proxies to __invoke().
-     *
-     * @return ContentValidationListener
-     */
-    #[Override]
-    public function createService(ServiceLocatorInterface $container)
-    {
-        return $this($container, ContentValidationListener::class);
     }
 
     /**
