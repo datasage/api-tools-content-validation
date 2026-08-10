@@ -4,8 +4,7 @@ declare(strict_types=1);
 
 namespace Laminas\ApiTools\ContentValidation\Validator\Db;
 
-use Laminas\ServiceManager\FactoryInterface;
-use Laminas\ServiceManager\ServiceLocatorInterface;
+use Laminas\ServiceManager\Factory\FactoryInterface;
 use Laminas\Stdlib\ArrayUtils;
 use Laminas\Validator\Db\NoRecordExists;
 use Override;
@@ -38,31 +37,5 @@ class NoRecordExistsFactory implements FactoryInterface
         }
 
         return new NoRecordExists($options);
-    }
-
-    /**
-     * Create and return a NoRecordExists validator (v2).
-     *
-     * Provided for backwards compatibility; proxies to __invoke().
-     *
-     * @return NoRecordExists
-     */
-    #[Override]
-    public function createService(ServiceLocatorInterface $validators)
-    {
-        $container = $validators->getServiceLocator() ?: $validators;
-        return $this($container, NoRecordExists::class, $this->options);
-    }
-
-    /**
-     * Set options property
-     *
-     * Implemented for backwards compatibility.
-     *
-     * @return void
-     */
-    public function setCreationOptions(array $options)
-    {
-        $this->options = $options;
     }
 }

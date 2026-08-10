@@ -81,9 +81,6 @@
     <ClassMustBeFinal>
       <code><![CDATA[ContentValidationListenerFactory]]></code>
     </ClassMustBeFinal>
-    <DeprecatedInterface>
-      <code><![CDATA[ContentValidationListenerFactory]]></code>
-    </DeprecatedInterface>
     <MixedArgument>
       <code><![CDATA[$config]]></code>
       <code><![CDATA[$container->get('InputFilterManager')]]></code>
@@ -103,9 +100,6 @@
       <code><![CDATA[$restConfig]]></code>
       <code><![CDATA[$restServices[$controllerService]]]></code>
     </MixedAssignment>
-    <ParamNameMismatch>
-      <code><![CDATA[$container]]></code>
-    </ParamNameMismatch>
   </file>
   <file src="src/InputFilter/InputFilterPlugin.php">
     <ClassMustBeFinal>
@@ -132,33 +126,18 @@
     </ClassMustBeFinal>
     <DeprecatedClass>
       <code><![CDATA[NoRecordExists]]></code>
-      <code><![CDATA[NoRecordExists]]></code>
-      <code><![CDATA[NoRecordExists::class]]></code>
       <code><![CDATA[new NoRecordExists($options)]]></code>
       <code><![CDATA[new NoRecordExists(ArrayUtils::merge(
                 $options,
                 ['adapter' => $container->get($options['adapter'])]
             ))]]></code>
     </DeprecatedClass>
-    <DeprecatedInterface>
-      <code><![CDATA[NoRecordExistsFactory]]></code>
-    </DeprecatedInterface>
     <MixedArgument>
-      <code><![CDATA[$container]]></code>
       <code><![CDATA[$options['adapter']]]></code>
     </MixedArgument>
-    <MixedAssignment>
-      <code><![CDATA[$container]]></code>
-    </MixedAssignment>
-    <ParamNameMismatch>
-      <code><![CDATA[$validators]]></code>
-    </ParamNameMismatch>
-    <PossiblyUnusedMethod>
-      <code><![CDATA[setCreationOptions]]></code>
-    </PossiblyUnusedMethod>
-    <UndefinedInterfaceMethod>
-      <code><![CDATA[getServiceLocator]]></code>
-    </UndefinedInterfaceMethod>
+    <UnusedProperty>
+      <code><![CDATA[$options]]></code>
+    </UnusedProperty>
   </file>
   <file src="src/Validator/Db/RecordExistsFactory.php">
     <ClassMustBeFinal>
@@ -166,33 +145,18 @@
     </ClassMustBeFinal>
     <DeprecatedClass>
       <code><![CDATA[RecordExists]]></code>
-      <code><![CDATA[RecordExists]]></code>
-      <code><![CDATA[RecordExists::class]]></code>
       <code><![CDATA[new RecordExists($options)]]></code>
       <code><![CDATA[new RecordExists(ArrayUtils::merge(
                 $options,
                 ['adapter' => $container->get($options['adapter'])]
             ))]]></code>
     </DeprecatedClass>
-    <DeprecatedInterface>
-      <code><![CDATA[RecordExistsFactory]]></code>
-    </DeprecatedInterface>
     <MixedArgument>
-      <code><![CDATA[$container]]></code>
       <code><![CDATA[$options['adapter']]]></code>
     </MixedArgument>
-    <MixedAssignment>
-      <code><![CDATA[$container]]></code>
-    </MixedAssignment>
-    <ParamNameMismatch>
-      <code><![CDATA[$validators]]></code>
-    </ParamNameMismatch>
-    <PossiblyUnusedMethod>
-      <code><![CDATA[setCreationOptions]]></code>
-    </PossiblyUnusedMethod>
-    <UndefinedInterfaceMethod>
-      <code><![CDATA[getServiceLocator]]></code>
-    </UndefinedInterfaceMethod>
+    <UnusedProperty>
+      <code><![CDATA[$options]]></code>
+    </UnusedProperty>
   </file>
   <file src="test/ContentValidationListenerTest.php">
     <ClassMustBeFinal>
